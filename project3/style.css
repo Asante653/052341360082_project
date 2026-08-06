@@ -1,0 +1,379 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8f4f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Header - White with Red accent */
+.header {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(139, 0, 0, 0.08);
+    border-left: 5px solid #dc3545;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: #dc3545;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #8b0000;
+}
+
+.logo span {
+    color: #666;
+    font-weight: 300;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.header-right span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.header-right span i {
+    color: #dc3545;
+}
+
+.admin-btn, .logout-btn {
+    background: #f8f0f0;
+    padding: 6px 16px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #8b0000;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid #f0d0d0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.admin-btn:hover, .logout-btn:hover {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Booking & Dashboard Sections */
+.booking-section, .dashboard-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(139, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+}
+
+.booking-section h2, .dashboard-header h2 {
+    font-size: 1.3rem;
+    color: #8b0000;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-section h2 i, .dashboard-header h2 i {
+    color: #dc3545;
+}
+
+/* Form */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group.full-width {
+    flex: 1 0 100%;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-group label i {
+    color: #dc3545;
+    width: 18px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 2px solid #f0e0e0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #faf8f8;
+    transition: 0.2s;
+    outline: none;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    background: white;
+}
+
+.submit-group {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.form-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Buttons - Red theme */
+.btn-primary {
+    background: #dc3545;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid #dc3545;
+}
+
+.btn-primary:hover {
+    background: #c82333;
+    border-color: #c82333;
+    transform: scale(1.02);
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.record-count {
+    background: #f8f0f0;
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    color: #8b0000;
+    border: 1px solid #f0d0d0;
+}
+
+/* Stats - Red theme */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #faf4f4;
+    padding: 0.8rem 1.2rem;
+    border-radius: 40px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f0e0e0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    font-weight: 500;
+}
+
+.stat-item i {
+    color: #dc3545;
+}
+
+.stat-item strong {
+    color: #8b0000;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th {
+    text-align: left;
+    padding: 12px 8px 12px 0;
+    color: #8b0000;
+    font-weight: 600;
+    border-bottom: 2px solid #f0e0e0;
+    background: #faf8f8;
+}
+
+td {
+    padding: 12px 8px 12px 0;
+    border-bottom: 1px solid #f0e8e8;
+    color: #333;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #faf8f8;
+}
+
+.empty-row td {
+    padding: 2rem 0;
+    text-align: center;
+    color: #999;
+}
+
+.badge {
+    background: #f8f0f0;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #8b0000;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid #f0d0d0;
+}
+
+.description-cell {
+    max-width: 150px;
+    font-size: 0.85rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    padding: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .header-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .form-group {
+        flex: 1 0 100%;
+    }
+    .submit-group {
+        justify-content: center;
+    }
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats {
+        justify-content: center;
+    }
+    .stat-item {
+        flex: 0 0 auto;
+    }
+}
